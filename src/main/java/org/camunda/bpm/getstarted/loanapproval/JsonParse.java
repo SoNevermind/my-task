@@ -29,7 +29,7 @@ public class JsonParse {
         }
         in.close();
 
-        String json = responce.toString().replace("{\"results\":[{\"name\":{", "");
+        String json = responce.toString().replace("{\"results\":[", "");
 
         HashMap<String, Object> map = new HashMap<String, Object>();
 
