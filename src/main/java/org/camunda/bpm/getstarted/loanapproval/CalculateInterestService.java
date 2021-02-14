@@ -32,6 +32,10 @@ public class CalculateInterestService implements JavaDelegate {
         managerFields.setSelected_Tariff_Of_Client((String) variables.get("Selected_tariff"));
         managerFields.setNumber_Of_Application((Long) variables.get("Number_Of_Application"));
 
+        JsonParse jsonParse = new JsonParse();
+
+        jsonParse.parseJson();
+
         System.out.println(variables.get("Selected_tariff"));
 
         System.out.println(fields.toString());
