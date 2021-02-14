@@ -8,7 +8,7 @@ public class Fields implements Serializable {
     protected String Middle;
     protected String Address;
     protected Long Age;
-    protected Tariff Selected_tariff;
+    protected String Selected_tariff;
 
     public String getSurname() {
         return Surname;
@@ -50,13 +50,12 @@ public class Fields implements Serializable {
         Age = age;
     }
 
-    public Tariff getSelected_tariff() {
+    public String getSelected_tariff() {
         return Selected_tariff;
     }
 
-    public String setSelected_tariff(Tariff selected_tariff) {
+    public void setSelected_tariff(String selected_tariff) {
         Selected_tariff = selected_tariff;
-        return null;
     }
 
     @Override

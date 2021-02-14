@@ -25,11 +25,11 @@ public class CalculateInterestService implements JavaDelegate {
         fields.setMiddle((String) variables.get("Middle"));
         fields.setAddress((String) variables.get("Address"));
         fields.setAge((Long) variables.get("Age"));
-        //fields.setSelected_tariff((Tariff) variables.get("Selected_staff"));
+        fields.setSelected_tariff((String) variables.get("Selected_tariff"));
 
         managerFields.setClient((String) variables.get("Client"));
         managerFields.setClient_Age((Long) variables.get("Client_Age"));
-        managerFields.setSelected_Tariff_Of_Client((String) variables.get("Selected_Tariff_Of_Client"));
+        managerFields.setSelected_Tariff_Of_Client((String) variables.get("Selected_tariff"));
         managerFields.setNumber_Of_Application((Long) variables.get("Number_Of_Application"));
 
         System.out.println(variables.get("Selected_tariff"));
