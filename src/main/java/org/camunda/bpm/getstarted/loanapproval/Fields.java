@@ -3,35 +3,17 @@ package org.camunda.bpm.getstarted.loanapproval;
 import java.io.Serializable;
 
 public class Fields implements Serializable {
-    protected String Surname;
-    protected String Name;
-    protected String Middle;
+    protected String FIO;
     protected String Address;
     protected Long Age;
     protected String Selected_tariff;
 
-    public String getSurname() {
-        return Surname;
+    public String getFIO() {
+        return FIO;
     }
 
-    public void setSurname(String surname) {
-        Surname = surname;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public String getMiddle() {
-        return Middle;
-    }
-
-    public void setMiddle(String middle) {
-        Middle = middle;
+    public void setFIO(String FIO) {
+        this.FIO = FIO;
     }
 
     public String getAddress() {
@@ -61,12 +43,10 @@ public class Fields implements Serializable {
     @Override
     public String toString() {
         return "Fields{" +
-                "Surname='" + Surname + '\'' +
-                ", Name='" + Name + '\'' +
-                ", Middle='" + Middle + '\'' +
+                "FIO='" + FIO + '\'' +
                 ", Address='" + Address + '\'' +
                 ", Age=" + Age +
-                ", Selected_tariff=" + Selected_tariff +
+                ", Selected_tariff='" + Selected_tariff + '\'' +
                 '}';
     }
 }

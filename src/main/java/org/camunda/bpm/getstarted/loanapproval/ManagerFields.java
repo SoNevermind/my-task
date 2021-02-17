@@ -4,7 +4,7 @@ public class ManagerFields {
     protected String Client;
     protected Long Client_Age;
     protected String Selected_Tariff_Of_Client;
-    protected long Number_Of_Application;
+    protected String Number_Of_Application;
 
     public String getClient() {
         return Client;
@@ -30,11 +30,11 @@ public class ManagerFields {
         Selected_Tariff_Of_Client = selected_Tariff_Of_Client;
     }
 
-    public long getNumber_Of_Application() {
+    public String getNumber_Of_Application() {
         return Number_Of_Application;
     }
 
-    public void setNumber_Of_Application(long number_Of_Application) {
+    public void setNumber_Of_Application(String number_Of_Application) {
         Number_Of_Application = number_Of_Application;
     }
 
