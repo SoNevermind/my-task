@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 public class Gateway implements JavaDelegate {
     @Override
     public void execute(DelegateExecution delegateExecution) {
+        delegateExecution.setVariable("Reject", true);
+
         if((Long) delegateExecution.getVariable("Age") >= 18){
             delegateExecution.setVariable("ageStatus", true);
         }else{

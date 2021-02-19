@@ -41,13 +41,16 @@ public class ManagerService implements JavaDelegate {
 
             final int n = results_arr.length();
             for (int i = 0; i < n; i++) {
-                long numberOfApp = results_arr.getJSONObject(i).getJSONObject("location").getLong("postcode");
+                char numberOfApp = (char) results_arr.getJSONObject(i).getJSONObject("location").getLong("postcode");
 
                 delegate.setVariable("Number_Of_Application", numberOfApp);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        System.out.print("after sub ");
+        System.out.println(delegate.getVariable("Reject"));
     }
 
     public static String getJSON(String url) {
