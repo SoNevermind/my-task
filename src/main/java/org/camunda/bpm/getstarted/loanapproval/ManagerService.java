@@ -24,13 +24,13 @@ public class ManagerService implements JavaDelegate {
         ManagerFields managerFields = new ManagerFields();
         Map<String, Object> variables = new HashMap<String, Object>();
 
-        try {
-            managerFields.setClient((String) variables.get("FIO"));
-            managerFields.setClient_Age((Long) variables.get("Client_Age"));
-            managerFields.setSelected_Tariff_Of_Client((String) variables.get("Selected_tariff"));
-        } catch (NullPointerException e){
+        //try {
+        managerFields.setClient((String) variables.get("FIO"));
+        managerFields.setClient_Age((Long) variables.get("Client_Age"));
+        managerFields.setSelected_Tariff_Of_Client((String) variables.get("Selected_tariff"));
+        /*} catch (NullPointerException e){
             e.printStackTrace();
-        }
+        }*/
 
         String json = getJSON("https://randomuser.me/api/");
         JSONObject obj;
@@ -41,7 +41,7 @@ public class ManagerService implements JavaDelegate {
 
             final int n = results_arr.length();
             for (int i = 0; i < n; i++) {
-                char numberOfApp = (char) results_arr.getJSONObject(i).getJSONObject("location").getLong("postcode");
+                Long numberOfApp = (Long) results_arr.getJSONObject(i).getJSONObject("location").getLong("postcode");
 
                 delegate.setVariable("Number_Of_Application", numberOfApp);
             }

@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import javax.inject.Named;
 import java.util.logging.Logger;
 
-@Component("Reject")
 @Named("logger")
 public class LoggerDelegate implements JavaDelegate {
 
@@ -24,11 +23,5 @@ public class LoggerDelegate implements JavaDelegate {
                 + ", BusinessKey=" + delegateExecution.getBusinessKey()
                 + ", executionId=" + delegateExecution.getId()
                 + "\n\n");
-        if( delegateExecution.getCurrentActivityId().equals("Activity_0buqxfj")){
-            delegateExecution.setVariable("Reject" , true);
-        }
-        if(delegateExecution.getCurrentActivityId().equals("Activity_0kjrn82")){
-            delegateExecution.setVariable("Reject", false);
-        }
     }
 }
